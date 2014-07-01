@@ -1,24 +1,31 @@
 # Fluent::Plugin::Yo
 
-TODO: Write a gem description
+A fluentd plugin to send Yo
 
-## Installation
+## Component
 
-Add this line to your application's Gemfile:
+### YoOutput
 
-    gem 'fluent-plugin-yo'
+[Yo!](http://www.justyo.co/)
 
-And then execute:
+## Configuration
 
-    $ bundle
+* Registrer Yo API via http://yoapi.justyo.co/
+* Register your account to API account in Yo app
+* Configure as below:
 
-Or install it yourself as:
+```xml
+<match yo.**>
+  type yo
+  api_key foobarbuz
+</match>
+```
 
-    $ gem install fluent-plugin-yo
+* And then, it is useful to use [fluent-plugin-notifier](https://github.com/tagomoris/fluent-plugin-notifier) to emit yo tag.
 
-## Usage
+## See Also
 
-TODO: Write usage instructions here
+- https://github.com/tagomoris/fluent-plugin-ikachan
 
 ## Contributing
 
