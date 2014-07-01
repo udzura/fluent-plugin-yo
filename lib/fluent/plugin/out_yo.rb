@@ -1,7 +1,7 @@
 require 'fluent/output'
 module Fluent
   class YoOutput < Fluent::Output
-    Fluent::Plugin.register_output('ikachan', self)
+    Fluent::Plugin.register_output('yo', self)
 
     config_param :api_key, :string, :default => nil
 
