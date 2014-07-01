@@ -1,4 +1,4 @@
 --color
 --warnings
 --require spec_helper
---format document
+--format documentation

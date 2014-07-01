@@ -18,3 +18,17 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 end
+
+require 'fluent/test'
+unless ENV.has_key?('VERBOSE')
+  nulllogger = Object.new
+  nulllogger.instance_eval {|obj|
+    def method_missing(method, *args)
+      # pass
+    end
+  }
+  $log = nulllogger
+end
+
+require 'fluent/plugin/out_yo'
+require 'webmock/rspec'
