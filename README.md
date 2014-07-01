@@ -1,4 +1,4 @@
-# Fluent::Plugin::Yo
+# fluent-plugin-yo
 
 A fluentd plugin to send Yo
 
