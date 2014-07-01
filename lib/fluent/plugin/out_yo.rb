@@ -1,5 +1,4 @@
-require "fluent/plugin/yo/version"
-
+require 'fluent/output'
 module Fluent
   class YoOutput < Fluent::Output
     Fluent::Plugin.register_output('ikachan', self)

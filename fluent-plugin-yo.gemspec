@@ -1,11 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'fluent/plugin/yo/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "fluent-plugin-yo"
-  spec.version       = Fluent::YoOutput::VERSION
+  spec.version       = "0.0.1"
   spec.authors       = ["Uchio KONDO"]
   spec.email         = ["udzura@udzura.jp"]
   spec.description   = "A fluentd plugin to send Yo"
@@ -18,6 +17,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "fluentd"
   spec.add_dependency "yo-api"
 
   spec.add_development_dependency "bundler", "~> 1.3"
