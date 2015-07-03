@@ -3,7 +3,7 @@ module Fluent
   class YoOutput < Fluent::Output
     Fluent::Plugin.register_output('yo', self)
 
-    config_param :api_key, :string, :default => nil
+    config_param :api_key, :string, :default => nil, :secret => true
 
     def initialize
       super
